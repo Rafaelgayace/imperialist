@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Discord</title>
+  <title>Imperialist - Login Discord</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -15,43 +15,56 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
+      text-align: center;
+      padding: 20px;
     }
 
     h1 {
       color: #7289da;
-      font-size: 2.5em;
+      font-size: 3em;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 1.2em;
       margin-bottom: 40px;
-      text-align: center;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     a.button {
       text-decoration: none;
       background-color: #7289da;
       color: white;
-      padding: 15px 30px;
+      padding: 15px 35px;
       border-radius: 10px;
       font-weight: bold;
+      font-size: 1.2em;
       transition: 0.3s;
     }
 
     a.button:hover {
       background-color: #5b6eae;
     }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo!</h1>
-  <p>Faça login com sua conta do Discord para autorizar a aplicação e visualizar os servidores que você possui acesso.</p>
-  
+  <h1>Imperialist</h1>
+  <p>Faça login com sua conta do Discord para autorizar a aplicação e conectar seu bot aos servidores que você possui acesso.</p>
+
   <!-- Botão de login Discord -->
-  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1413933552533241990&redirect_uri=https%3A%2F%2Frafelgayace.github.io%2Fcallback&response_type=code&scope=identify%20guilds">
+  <a class="button" href="https://discord.com/oauth2/authorize?client_id=1413933552533241990&permissions=8&response_type=code&redirect_uri=https%3A%2F%2Frafaelgayace.github.io%2Fimperialist%2F&integration_type=0&scope=guilds+connections+identify+bot+guilds.channels.read+guilds.members.read+guilds.join">
     Login com Discord
   </a>
+
+  <footer>
+    &copy; 2025 Imperialist. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
