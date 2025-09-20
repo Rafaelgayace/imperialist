@@ -8,7 +8,7 @@ const CLIENT_SECRET = "ST7euR0805MzA_za8eimv_hXXiIyt_Z_";
 const REDIRECT_URI = "https://imperialist-1.onrender.com/callback";
 
 // URL de autorização completa
-const OAUTH_URL = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=identify%20guilds%20connections%20guilds%20guilds.members.read`;
+const OAUTH_URL = `https://discord.com/api/oauth2/authorize?client_id=${1413933552533241990}&redirect_uri=${encodeURIComponent(https://imperialist-1.onrender.com/callback)}&response_type=code&scope=identify%20guilds%20connections%20guilds%20guilds.members.read`;
 
 // Rota para iniciar login
 app.get("/oauth2/authorize", (req, res) => {
