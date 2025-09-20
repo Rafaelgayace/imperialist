@@ -6,65 +6,45 @@
   <title>Imperialist - Login Discord</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #1e1e2f;
-      color: #f0f0f0;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
-      text-align: center;
-      padding: 20px;
     }
-
     h1 {
-      color: #7289da;
-      font-size: 3em;
       margin-bottom: 20px;
+      color: #f5c518;
     }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      max-width: 600px;
-    }
-
     a.button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #5865f2;
+      border-radius: 8px;
       text-decoration: none;
-      background-color: #7289da;
-      color: white;
-      padding: 15px 35px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1.2em;
-      transition: 0.3s;
+      transition: background-color 0.3s;
     }
-
     a.button:hover {
-      background-color: #5b6eae;
+      background-color: #4752c4;
     }
-
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9em;
-      color: #aaa;
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbb;
+      text-align: center;
+      max-width: 400px;
     }
   </style>
 </head>
 <body>
-  <h1>Imperialist</h1>
-  <p>Faça login com sua conta do Discord para autorizar a aplicação e conectar seu bot aos servidores que você possui acesso.</p>
-
-  <!-- Botão de login Discord -->
-  <a class="button" href="https://discord.com/oauth2/authorize?client_id=1413933552533241990&redirect_uri=https%3A%2F%2Frafaelgayace.github.io%2Fimperialist%2Fcallback&response_type=code&scope=identify%20guilds">
-    Login com Discord
-  </a>
-
-  <footer>
-    &copy; 2025 Imperialist. Todos os direitos reservados.
-  </footer>
+  <h1>Imperialist Login</h1>
+  <a class="button" href="https://imperialist-1.onrender.com/oauth2/authorize">Login com Discord</a>
+  <p>Ao clicar em "Login com Discord", você será redirecionado para autorizar o acesso ao seu Discord. Seus dados e servidores serão registrados no backend para que possamos identificar logins.</p>
 </body>
 </html>
