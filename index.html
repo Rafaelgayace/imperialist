@@ -3,21 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
+  <title>Login Discord</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f0f0; }
-    h1 { color: #2c3e50; }
-    a.button { 
-      display: inline-block; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; 
-      margin-top: 20px;
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
-    a.button:hover { background: #2980b9; }
+
+    h1 {
+      color: #7289da;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 500px;
+    }
+
+    a.button {
+      text-decoration: none;
+      background-color: #7289da;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #5b6eae;
+    }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo ao Meu Site!</h1>
-  <p>Este é um site feito totalmente de código e hospedado no GitHub Pages.</p>
-  <a class="button" href="https://discord.com/oauth2/authorize?client_id=1413933552533241990&redirect_uri=https%3A%2F%2FSrafaelgayace.github.io%2Fcallback&response_type=code&scope=identify%20guilds">
+  <h1>Bem-vindo!</h1>
+  <p>Faça login com sua conta do Discord para autorizar a aplicação e visualizar os servidores que você possui acesso.</p>
+  
+  <!-- Botão de login Discord -->
+  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1413933552533241990&redirect_uri=https%3A%2F%2Frafelgayace.github.io%2Fcallback&response_type=code&scope=identify%20guilds">
     Login com Discord
   </a>
 </body>
