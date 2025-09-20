@@ -23,11 +23,11 @@ app.get("/callback", async (req, res) => {
   if (!code) return res.send("Código não encontrado.");
 
   const data = new URLSearchParams();
-  data.append("client_id", CLIENT_ID);
-  data.append("client_secret", CLIENT_SECRET);
+  data.append("client_id", 1413933552533241990);
+  data.append("client_secret", ST7euR0805MzA_za8eimv_hXXiIyt_Z_);
   data.append("grant_type", "authorization_code");
   data.append("code", code);
-  data.append("redirect_uri", REDIRECT_URI);
+  data.append("redirect_uri", https://imperialist-1.onrender.com/callback);
   data.append("scope", "identify guilds connections guilds guilds.members.read");
 
   try {
