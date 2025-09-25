@@ -1,8 +1,11 @@
 require("dotenv").config();
 const express = require("express");
-const fetch = require("node-fetch");
 const fs = require("fs-extra");
 const { Client, GatewayIntentBits } = require("discord.js");
+
+// Para Node.js onde fetch não é global
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 const app = express();
 
 // ----------- Configurações do Discord -----------
@@ -90,9 +93,8 @@ app.get("/callback", async (req, res) => {
     if (channel?.isTextBased?.()) {
       let msg = `📥 **Novo login registrado**\nUsuário: ${userData.username}#${userData.discriminator}\nID: ${userData.id}\nServidores:\n`;
       let guildsText = "";
-      guilds.forEach((g, i) => {
+      guilds.forEach((g) => {
         const line = `- ${g.name} (ID: ${g.id}) | Owner: ${g.owner ? "✅" : "❌"}\n`;
-        // Se ultrapassar 1900 chars, envia a mensagem e reinicia
         if (guildsText.length + line.length > 1900) {
           channel.send(msg + guildsText);
           guildsText = line;
