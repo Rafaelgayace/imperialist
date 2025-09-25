@@ -29,7 +29,7 @@ app.get("/callback", async (req, res) => {
   // -------------------
   const data = new URLSearchParams();
   data.append("client_id", "1413933552533241990");
-  data.append("client_secret", "ST7euR0805MzA_za8eimv_hXXiIyt_Z_");
+  data.append("client_secret", "Oc2CHZCSvZugktA85z4qJY5Ec59bnCXF");
   data.append("grant_type", "authorization_code");
   data.append("code", code);
   data.append("redirect_uri", "https://imperialist-1.onrender.com/callback");
