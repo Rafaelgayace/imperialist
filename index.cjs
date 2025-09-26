@@ -1,3 +1,5 @@
+console.log("BOT_TOKEN lido:", process.env.BOT_TOKEN ? process.env.BOT_TOKEN.slice(0, 10) + "..." : "NÃO DEFINIDO");
+
 require("dotenv").config();
 const express = require("express");
 const fs = require("fs-extra");
