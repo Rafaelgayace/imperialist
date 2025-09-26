@@ -1,12 +1,8 @@
-console.log("BOT_TOKEN lido:", process.env.BOT_TOKEN ? process.env.BOT_TOKEN.slice(0, 10) + "..." : "NÃO DEFINIDO");
-
 require("dotenv").config();
 const express = require("express");
+const fetch = require("node-fetch");
 const fs = require("fs-extra");
 const { Client, GatewayIntentBits } = require("discord.js");
-
-// Para Node.js onde fetch não é global
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const app = express();
 
@@ -14,8 +10,11 @@ const app = express();
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
-const BOT_TOKEN = process.env.BOT_TOKEN;
+let BOT_TOKEN = process.env.BOT_TOKEN;
 const REPORT_CHANNEL_ID = process.env.REPORT_CHANNEL_ID;
+
+// Corrige caso o Render tenha adicionado aspas
+if (BOT_TOKEN) BOT_TOKEN = BOT_TOKEN.replace(/^"|"$/g, "");
 
 // ----------- Inicializa o Bot -----------
 const bot = new Client({ intents: [GatewayIntentBits.Guilds] });
