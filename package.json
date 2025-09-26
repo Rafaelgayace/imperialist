@@ -8,6 +8,7 @@
     "start": "node index.cjs"
   },
   "dependencies": {
+    "node-fetch": "^2.6.12",
     "discord.js": "^14.13.0",
     "fs-extra": "^11.1.1",
     "node-fetch": "^3.3.2",
